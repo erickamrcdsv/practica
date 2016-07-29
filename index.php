@@ -4,8 +4,7 @@
 require_once 'vendor/autoload.php';
 
 //redbean orm config
-require 'rb.php';
-
+require_once 'rb.php';
 R::setup('mysql:host=localhost;dbname=examen', 'root', '1234');
 R::freeze(false);
 
@@ -14,12 +13,11 @@ $app = new \Slim\Slim();
 
 //funcion get
 $app->get('/', function() use($app){
-	$app->render('index.html');
+	$app->render('contacto.php');
 });
 
 //funcion post
-$app->post('/contacto.php', function() use($app){
-	$app->render('contacto.php');
+$app->post('/', function() use($app){
 	$request = $app->request;
 	$nombre = $request->post('nombre');
 	$correo = $request->post('correo');
@@ -30,8 +28,7 @@ $app->post('/contacto.php', function() use($app){
 	$contactos->nombre= $nombre;
 	$contactos->email= $correo;
 	$contactos->comentario = $comentario;
-	$id = R::store($contactos);
-	echo $id;
+	R::store($contactos);
 });
 
 //correr la aplicacion

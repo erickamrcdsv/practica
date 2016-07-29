@@ -12,13 +12,13 @@
     <header>
       <div>
         <div id="logo_text">
-          <h1><a href="index.html">Teknol</span></a></h1>
+          <h1><a href="Principal.html">Teknol</span></a></h1>
           <h2>Website</h2>
         </div>
       </div>
       <nav>
         <ul class="sf-menu" id="nav">
-          <li class="selected"><a href="index.html">Nosotros</a></li>
+          <li class="selected"><a href="Principal.html">Nosotros</a></li>
           <li><a href="contacto.php">Contacto</a></li>
         </ul>
       </nav>
