@@ -13,7 +13,7 @@ $app = new \Slim\Slim();
 
 //funcion get
 $app->get('/', function() use($app){
-	$app->render('contacto.php');
+	$app->render('contacto.html');
 });
 
 //funcion post

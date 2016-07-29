@@ -5,6 +5,7 @@
   <title>Teknol</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/validar.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
       <nav>
         <ul class="sf-menu" id="nav">
           <li class="selected"><a href="Principal.html">Nosotros</a></li>
-          <li><a href="contacto.php">Contacto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -27,15 +28,22 @@
 		<div>		  
 			<img width="350" height="250" src="images/logo-teknol.png" />
 		<div id="content">
-			<h1>Bienvenido a Teknol</h1>
-			<p>Somos una empresa especializada en el desarrollo de software y soluciones tecnológicas e innovadoras para pequeñas, medianas y grandes empresas en cualquier sector. Ofrecemos las mejores soluciones tecnológicas a nuestros clientes, mediante propuestas innovadoras y de calidad que les permita optimizar sus procesos, reducir costos y sobre todo aumentar su competitividad. Contamos con una amplia línea de productos y servicios. Nos especializamos en la tecnología touch y nos caracterizamos por diseñar, desarrollar y producir ideas que involucren la innovación y la tecnología.</p>
+			<h1>Contacto</h1>
+			<form method="post" accept-charset="utf-8" >
+				<div class="form_settings">
+					<p><span>Nombre:</span><input type="text" name="nombre" placeholder="Nombre"/><p>
+					<p><span>e-mail:</span><input type="text" name="correo" placeholder="e-mail"/><p>
+					<p><span>Comentario:</span><textarea name="comentario" placeholder="Comment"></textarea><p>
+					<p style="padding-top: 7px"><input type="submit" value= "Enviar"/></p>
+				</div>
+			</form>
 		</div>			
 		</div>
     </div>
     <footer>
       <p>Copyright &copy; 2016 Teknol</p>
     </footer>
-  </div> 
-  
+  </div>
+	
 </body>
 </html>
