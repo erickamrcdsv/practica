@@ -1,21 +1,24 @@
 <?php
-//incluimos redbean
-require_once 'rb.php';
-R::setup('mysql:host=localhost;dbname=examen;charset=utf8', 'root', '1234');
-R::freeze(true);
 
 //incluimos el framework slim
 require_once 'vendor/autoload.php';
 
-//creamos la aplicacion
+//redbean orm config
+require 'rb.php';
+
+R::setup('mysql:host=localhost;dbname=examen', 'root', '1234');
+R::freeze(false);
+
+//slim framework
 $app = new \Slim\Slim();
 
 //funcion get
 $app->get('/', function() use($app){
-	$app->render('contacto.php');
+	$app->render('index.html');
 });
+
 //funcion post
-$app->post('/', function() use($app){
+$app->post('/contacto.php', function() use($app){
 	$app->render('contacto.php');
 	$request = $app->request;
 	$nombre = $request->post('nombre');
